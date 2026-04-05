@@ -1,0 +1,262 @@
+/* Welcome Banner - Violet Gradient for Student */
+.student-welcome-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 0;
+  padding: 3rem 2rem;
+  color: white;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-content {
+  max-width: 100%;
+}
+
+.welcome-date {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.welcome-subtitle {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 0;
+}
+
+/* Card Hover Effect - Zoom on Hover */
+.card-hover-container {
+  perspective: 1000px;
+}
+
+.card-hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Card styling */
+.card {
+  transition: all 0.3s ease-in-out;
+  border-width: 2px;
+  border-radius: 8px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card h5 {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Violet borders for cards */
+.card-primary {
+  border-color: #667eea !important;
+}
+
+/* Complaint Card - Violet border */
+.complaint-card {
+  border-color: #667eea !important;
+}
+
+/* Complaint Textarea - Violet border */
+.complaint-textarea {
+  border: 2px solid #667eea !important;
+  border-radius: 6px;
+}
+
+.complaint-textarea:focus {
+  border-color: #764ba2 !important;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25) !important;
+}
+
+/* Room Request Button - Strong Violet */
+.btn-room-request {
+  background: linear-gradient(135deg, #5568d3 0%, #6f4f9a 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.65rem 1.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-room-request:hover:not(:disabled) {
+  background: linear-gradient(135deg, #6f4f9a 0%, #5568d3 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(117, 39, 161, 0.6);
+  color: white;
+}
+
+.btn-room-request:active:not(:disabled) {
+  transform: translateY(0px);
+}
+
+.btn-room-request:disabled {
+  background: linear-gradient(135deg, #8a96d8 0%, #9184bb 100%);
+  opacity: 0.7;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Button hover effects */
+.btn:hover {
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0px);
+}
+
+/* Textarea custom styling - Violet border */
+textarea.form-control {
+  border: 2px solid #764ba2;
+  border-radius: 6px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+}
+
+textarea.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+textarea.form-control-sm {
+  font-size: 0.875rem;
+}
+
+/* Table Header - Violet Background */
+.table-header-violet {
+  background: linear-gradient(135deg, #5568d3 0%, #6f4f9a 100%) !important;
+}
+
+.table-header-violet th {
+  background: inherit;
+  color: white !important;
+  font-weight: 600;
+  border: none !important;
+  padding: 1rem !important;
+  text-align: left;
+}
+
+/* Status Table styling */
+.status-table {
+  border-collapse: collapse;
+}
+
+.status-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.status-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.status-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* Badge Type styling - Violet badges */
+.badge-type {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.badge-complaint {
+  background: linear-gradient(135deg, #5568d3 0%, #6f4f9a 100%);
+  color: white;
+}
+
+.badge-room {
+  background: linear-gradient(135deg, #5568d3 0%, #6f4f9a 100%);
+  color: white;
+}
+
+/* Badge styling */
+.badge {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* Status Check header */
+h5 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Table styling */
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 100% !important;
+  }
+  
+  .col-auto {
+    margin-bottom: 1.5rem;
+  }
+
+  .welcome-text {
+    font-size: 1.5rem;
+  }
+
+  .student-welcome-banner {
+    padding: 2rem 1.5rem;
+  }
+
+  .table-header-violet th {
+    padding: 0.75rem !important;
+    font-size: 0.9rem;
+  }
+
+  .status-table tbody td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-welcome-banner {
+    padding: 1.5rem 1rem;
+  }
+
+  .welcome-text {
+    font-size: 1.25rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,499 @@
+/* ============================================
+   LOGIN PAGE - FULL BACKGROUND IMAGE STYLING
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.login-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background Image with Overlay */
+.login-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://img.freepik.com/premium-photo/hostel-dorm-room-with-beds-arranged-modern-design-double-single-beds-with-bunk-beds_1268487-7426.jpg?semt=ais_incoming&w=740&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+/* Dark Overlay for Better Readability */
+.login-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.45) 100%);
+  z-index: 1;
+}
+
+/* Content Wrapper - MEDIUM SIZE */
+.login-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  padding: 1.5rem;
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Login Header */
+.login-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main Title - "OUR HOSTELS" */
+.login-main-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  font-family: 'Arial Black', 'Helvetica Bold', sans-serif;
+}
+
+/* Subtitle - "Hostel Management System" */
+.login-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.3rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.8px;
+  color: #f0f0f0;
+}
+
+/* Description */
+.login-description {
+  font-size: 0.9rem;
+  margin: 0.3rem 0 0 0;
+  opacity: 0.95;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #e8e8e8;
+}
+
+/* Login Card - MEDIUM SIZE */
+.login-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  animation: zoomIn 0.6s ease-out 0.1s both;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Student Section */
+.student-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 0;
+}
+
+/* Admin Section */
+.admin-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 0;
+}
+
+/* Form Labels - MEDIUM SIZE */
+.form-label {
+  color: #333;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+
+/* Form Controls - SMALL */
+.form-control-sm {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.form-control-sm:focus {
+  border-color: #667eea;
+  background-color: white;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.2);
+}
+
+/* Small Text Helpers - HIDDEN */
+small {
+  display: none;
+}
+
+/* Buttons - SMALL */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-dark {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  border: none;
+  color: white;
+}
+
+.btn-dark:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-dark:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-dark:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Alert Styling */
+.alert {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+}
+
+.alert-danger .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #667eea;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Divider */
+.border-end {
+  border-right: 1px solid #e0e0e0;
+}
+
+/* Login Footer */
+.login-footer {
+  margin-top: 1.5rem;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Text Colors */
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet - iPad */
+@media (max-width: 768px) {
+  .login-container {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .login-content {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .login-main-title {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+
+  .login-subtitle {
+    font-size: 1rem;
+  }
+
+  .login-description {
+    font-size: 0.85rem;
+  }
+
+  .login-card {
+    border-radius: 8px;
+  }
+
+  .border-end {
+    border-right: none !important;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .col-md-6 {
+    padding: 1.5rem !important;
+  }
+
+  .login-header {
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile - Small Devices */
+@media (max-width: 480px) {
+  .login-container {
+    min-height: 100vh;
+    padding: 0.5rem;
+  }
+
+  .login-content {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+
+  .login-main-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .login-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .login-description {
+    font-size: 0.8rem;
+  }
+
+  .login-card {
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .col-md-6 {
+    padding: 1rem !important;
+  }
+
+  .row.g-0 {
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 0.95rem;
+    margin-bottom: 1rem !important;
+  }
+
+  .form-label {
+    font-size: 0.75rem;
+  }
+
+  .form-control-sm {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .btn-sm {
+    padding: 0.45rem 0.875rem;
+    font-size: 0.85rem;
+  }
+
+  .mb-3 {
+    margin-bottom: 0.8rem !important;
+  }
+
+  .mb-2 {
+    margin-bottom: 0.6rem !important;
+  }
+
+  .alert {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .login-footer {
+    margin-top: 1rem;
+  }
+
+  .login-footer p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .login-main-title {
+    font-size: 1.5rem;
+  }
+
+  .col-md-6 {
+    padding: 0.75rem !important;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  .btn-sm {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .form-control-sm {
+    font-size: 0.8rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .login-card {
+    background: #1a1a1a;
+    color: white;
+  }
+
+  .student-section,
+  .admin-section {
+    background: #2a2a2a;
+  }
+
+  .form-control-sm {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+  }
+
+  .form-control-sm:focus {
+    background-color: #444;
+    border-color: #667eea;
+  }
+
+  .form-label {
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #667eea;
+  }
+
+  .border-end {
+    border-color: #444;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .login-background {
+    display: none;
+  }
+
+  .login-container {
+    background: white;
+  }
+}
